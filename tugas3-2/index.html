@@ -1,0 +1,105 @@
+<!-- 
+    Nama    : Bim Yusuf Karang
+    Kelas   : B
+    NPM     : 140810230084
+    Program : Kalkulator - Tugas 3 Pemrograman Web
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <style>
+        body{
+    display: grid;
+    place-items: center;
+}
+
+#forms{
+    display: block;
+    font-family: Arial;
+    background-color: rgb(194, 194, 194);
+    padding: 15px;
+}
+
+input{
+    display: block;
+    padding: 10px;
+}
+
+table th{
+    text-align: left;
+}
+
+#buttonSelect{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button{
+    height: 50px;
+    width: 50px;
+    font-size: 25px;
+}
+
+    </style>
+</head>
+<body>
+        <div id="forms">
+            <table>
+                <tr>
+                    <th><label for="">Bilangan pertama</label></th>
+                    <td><input id="bil1" type="number" name="bil1"></td>
+                </tr>
+                <tr>
+                    <th><label for="">Bilangan Kedua</label></th>
+                    <td><input id="bil2" type="number" name="bil2"></td>
+                </tr>
+                <tr></tr>
+                    <th><label for="">Hasil</label></th>
+                    <td><input id="hasil" type="number" name="hasil" disabled></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div id="buttonSelect">
+                            <button onclick="plus()">+</button>
+                            <button onclick="minus()">-</button>
+                            <button onclick="times()">X</button>
+                            <button onclick="divides()">/</button>
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <script>
+            const bil1 = document.getElementById("bil1");
+            const bil2 = document.getElementById("bil2");
+            const hasil = document.getElementById("hasil");
+
+
+            function plus(){
+                hasil.value = Number(bil1.value) + Number(bil2.value); 
+            }
+
+            function minus(){
+                hasil.value = Number(bil1.value) - Number(bil2.value);
+            }
+
+            function times(){
+
+                hasil.value = Number(bil1.value) * Number(bil2.value);
+            }
+
+            function divides(){
+                hasil.value = Number(bil1.value) / Number(bil2.value);
+            }
+
+        </script>
+</body>
+</html>

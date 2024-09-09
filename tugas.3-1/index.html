@@ -1,0 +1,94 @@
+<!-- 
+    Nama    : Bim Yusuf Karang
+    Kelas   : B
+    NPM     : 140810230084
+    Program : Web Konversi nilai - Tugas 3 Pemrograman Web
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Nilai</title>
+    <style>
+        body{
+    display: grid;
+    place-items: center;
+}
+
+#forms{
+    display: block;
+    font-family: Arial;
+    background-color: rgb(194, 194, 194);
+    padding: 15px;
+}
+
+input{
+    display: block;
+    padding: 10px;
+}
+
+table th{
+    text-align: left;
+}
+
+
+button{
+    height: 50px;
+    width: fit-content;
+    font-size: 15px;
+}
+
+    </style>
+</head>
+<body>
+        <div id="forms">
+            <table>
+                <tr>
+                    <td>
+                        <label for="">Masukkan Nilai</label>
+                        <input type="number" name="nilai" id="nilai">
+                    </td>
+                    <td>
+                        <label for="">Huruf Mutu</label>
+                        <input type="text" name="hurufmutu" id="hurufmutu" disabled>
+                    </td>
+                </tr>
+                <tr>
+                    <td><button onclick="konversi()">Konversi</button></td>
+                </tr>
+            </table>
+        </div>
+
+
+        <script>
+            const hurufmutu = document.getElementById("hurufmutu");
+            
+            
+            function konversi(){
+                const value = document.getElementById("nilai").value;
+                
+                if(value >= 0 && value <= 40){
+                    hurufmutu.value = "E";
+                }else if(value >= 41 && value <= 55){
+                    hurufmutu.value = "D";
+                }else if(value >= 56 && value <= 60){
+                    hurufmutu.value = "C";
+                }else if(value >= 61 && value <= 65){
+                    hurufmutu.value = "BC";
+                }else if(value >= 66 && value <= 70){
+                    hurufmutu.value = "B";
+                }else if(value >= 71 && value <= 80){
+                    hurufmutu.value = "AB";
+                }else if(value >= 81 && value <= 100){
+                    hurufmutu.value = "A";
+                }else{
+                    hurufmutu.value = "Invalid number";
+                }
+            }
+
+        </script>
+</body>
+</html>

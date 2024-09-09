@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ffff82;
+    display: grid;
+    height: 100vh;
+}
+
+table{
+    border-collapse: collapse;
+    background-color: whitesmoke;
+    place-self: center;
+    font-family: Arial;
+    box-shadow: 2px 2px 10px gray;
+}
+
+td,th{
+    padding: 10px;
+}
+
+table img{
+    margin: 30px 40px 30px 30px;
+}
